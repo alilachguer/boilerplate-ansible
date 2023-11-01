@@ -12,3 +12,11 @@ ssh:
 ping:
 	ansible all -m ping
 
+apt-update:
+	ansible all -m apt -a update_cache=true --become --ask-become-pass
+
+apt-sl:
+	ansible all -m apt -a name=sl --become --ask-become-pass
+
+apt-upgrade:
+	ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
