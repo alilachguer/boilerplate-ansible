@@ -9,3 +9,6 @@ ssh-copy-id:
 ssh:
 	ssh -i ~/.ssh/ansible ${nameserver}
 
+ping:
+	ansible all -m ping
+
