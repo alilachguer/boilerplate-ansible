@@ -20,3 +20,9 @@ apt-sl:
 
 apt-upgrade:
 	ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
+
+install-apache:
+	ansible-playbook --ask-become-pass playbooks/install_apache.yml
+
+run-site:
+	ansible-playbook --ask-become-pass playbooks/site.yml
